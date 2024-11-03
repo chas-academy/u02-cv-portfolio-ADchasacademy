@@ -1,0 +1,448 @@
+@import "variables";
+@import "reset";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.second-color {
+  color: $secondary-color;
+}
+
+html {
+  width: 100vw;
+}
+body {
+  background: $background-body;
+  font-size: $text;
+  color: $text-Color;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 1rem;
+  background: $background;
+  font-weight: $semiBold;
+  z-index: 100;
+
+  .logo {
+    width: auto;
+    height: 2rem;
+    margin-right: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    padding-right: 0.7rem;
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        color: $primary-color;
+        opacity: 30%;
+      }
+    }
+  }
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  height: 100vh;
+
+  #landing-page {
+    width: 100%;
+    position: relative;
+  }
+  .hero-image {
+    object-fit: cover;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(19, 18, 18, 0.116);
+    width: 100%;
+    height: 100%;
+    color: $background-body;
+    font-size: $headingM;
+
+    .main-title {
+      top: 75%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 2.3rem;
+      text-align: center;
+      opacity: 85%;
+
+      .portfolio-title {
+        font-size: $headingS;
+      }
+    }
+  }
+}
+
+.find-out-more {
+  @include button;
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $text-Color;
+  }
+}
+
+#projects {
+  width: 100vw;
+
+  .video-styling {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  #projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .project-category {
+      background: rgb(14, 13, 13);
+      padding: 2rem;
+      color: $background-body;
+      font-weight: $semiBold;
+      border-radius: $border-radiusM;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .skills-used-list {
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        padding-left: 0.5rem;
+
+        bottom: 0;
+      }
+      .project-button {
+        @include button;
+        background: $text-Color;
+        padding: 0.5rem;
+      }
+    }
+
+    #portfolio-picture {
+      width: 100%;
+      object-fit: cover;
+      height: 56%;
+      flex-grow: 1;
+      border-radius: $border-radiusM;
+    }
+    .memory-card {
+      width: 100%;
+      height: 56%;
+      flex-grow: 1;
+      border-radius: $border-radiusM;
+    }
+  }
+}
+
+#skills {
+  width: 100vw;
+  background: $section-background;
+  padding-bottom: 1rem;
+}
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .skills-category {
+    background: $primary-color;
+    padding: 1rem;
+    border-radius: $border-radiusM;
+    width: 14.375rem;
+    padding: 1rem 2rem;
+    font-weight: $semiBold;
+    color: $background-body;
+    .skills-title {
+      line-height: 3rem;
+      font-size: 1.125rem;
+    }
+    .skills-subtitle {
+      color: $secondary-color;
+    }
+  }
+}
+
+#about-me,
+#projects,
+.skill-wrapper {
+  width: 80vw;
+  line-height: 2rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+  p {
+    font-size: $text;
+    font-weight: $regular;
+  }
+  .section-title {
+    @include section-title;
+  }
+  .section-subtitle {
+    @include subtitle;
+  }
+
+  .contact-me-button {
+    display: inline-block;
+    @include button;
+    &:hover {
+      background-color: $secondary-color;
+      color: $text-Color;
+    }
+  }
+}
+
+@media (min-width: 344px) {
+  .nav-list {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 500px) {
+  #projects #projects-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .project-category {
+      padding: 2rem;
+      color: $background-body;
+      font-weight: $semiBold;
+      border-radius: $border-radiusM;
+      width: 100vw;
+
+      .skills-used-list {
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+      }
+      .project-button {
+        @include button;
+        background: $text-Color;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1010px) {
+  .wrapper .overlay .main-title {
+    top: 75%;
+    font-size: $headingL;
+  }
+  #about-me,
+  #projects,
+  .skill-wrapper {
+    width: 65vw;
+  }
+
+  #skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .skills-category {
+      background: $primary-color;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      width: 30%;
+      padding: 1.5rem 3rem;
+    }
+  }
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(calc(-25%));
+  }
+}
+
+#contact-me-container {
+  display: flex;
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+#contact-me-container {
+  display: flex;
+  font-size: 40px;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: infiniteScroll;
+  animation-timing-function: linear;
+  color: $background-body;
+  width: 100%;
+}
+
+#horizontal-scrolling-text {
+  white-space: nowrap;
+}
+
+#contact-me-container {
+  display: flex;
+  font-size: 40px;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: infiniteScroll;
+  animation-timing-function: linear;
+  color: $background-body;
+  width: 100%;
+  font-weight: $semiBold;
+}
+
+#pricing {
+  padding: 4rem 0;
+  background: rgba(252, 219, 162, 0.3);
+  .wrapper {
+    height: unset;
+
+    h2.section-title {
+      @include section-title;
+    }
+
+    margin: 0 auto;
+    flex-direction: column;
+    width: 80vw;
+    @media (min-width: 1010px) {
+      width: 65vw;
+    }
+    .table {
+      overflow-x: scroll;
+      max-width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid $background-body;
+        background-color: $primary-color;
+        color: $background-body;
+      }
+
+      th {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        background-color: $background-body;
+      }
+    }
+  }
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 0;
+  background: $text-Color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #contact-me {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .section-title {
+      @include section-title;
+      color: $secondary-color;
+      margin-bottom: 2rem;
+      .white {
+        color: $background-body;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      button.contact-me-button {
+        margin-left: auto;
+        margin-top: 1rem;
+        @include button;
+      }
+      .field-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem;
+        &.half-width {
+          width: 50%;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+        label {
+          color: $background-body;
+        }
+        input {
+          border-radius: 5px;
+          font-size: 18px;
+          min-height: 2.5rem;
+          padding: 10px;
+        }
+        textarea {
+          border-radius: 5px;
+          padding: 10px;
+          resize: none;
+          height: 6rem;
+        }
+      }
+    }
+  }
+
+  #contact-me-container {
+    #horizontal-scrolling-text {
+      @include section-title;
+      font-style: italic;
+      color: $background-body;
+      text-transform: uppercase;
+    }
+  }
+
+  .primary-color {
+    color: $primary-color;
+  }
+  > * {
+    margin: 0 auto;
+    width: 80vw;
+    @media (min-width: 1010px) {
+      width: 65vw;
+    }
+  }
+}

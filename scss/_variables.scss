@@ -1,0 +1,101 @@
+/*$primary-color: #844dd6;
+$second-color: #ffcd00;
+$text-color: #151515;
+$body-color: #fffbf4;
+$text: 1rem;
+$section-backgroundcolor: rgba(252, 219, 162, 0.3);
+
+@mixin text-styles {
+  color: $text-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+@mixin button {
+  background-color: $primary-color;
+  color: $body-color;
+  font-weight: 800;
+  border-radius: 16px;
+
+  padding: 14px 24px;
+  text-align: center;
+}
+
+@mixin background-gradient {
+  background: linear-gradient(
+    271.15deg,
+    #c38c20 0.99%,
+    rgba(191, 137, 26, 0.8) 12.75%,
+    #f5c972 49.51%,
+    #f9cc79 85.29%,
+    #f8cf7f 99.01%
+  );
+}
+*/
+$background: linear-gradient(to left, #f8cf7f, #c38c20);
+
+$primary-color: #844dd6;
+$secondary-color: #ffcd00;
+$background-body: #fafafa;
+$section-background: rgba(252, 219, 162, 0.3);
+$text-Color: #0a0a0a;
+$text: 1rem;
+$headingS: 1.5rem;
+$headingM: 3rem;
+$headingL: 4rem;
+$button-Text: 1.31rem;
+$regular: 500;
+$medium: 600;
+$semiBold: 700;
+$extraBold: 800;
+$border-radiusS: 1rem;
+$border-radiusM: 1.5rem;
+$subtitle: 1.25rem;
+
+@mixin subtitle {
+  color: $primary-color;
+  font-size: $subtitle;
+  font-weight: $medium;
+  line-height: 3rem;
+}
+
+@mixin background-gradient {
+  background: linear-gradient(
+    271.15deg,
+    #c38c20 0.99%,
+    rgba(191, 137, 26, 0.8) 12.75%,
+    #f5c972 49.51%,
+    #f9cc79 85.29%,
+    #f8cf7f 99.01%
+  );
+}
+
+// $background: #fffbf4;
+
+@mixin text-styles {
+  color: $text-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: $medium;
+}
+
+@mixin section-title {
+  font-size: $headingM;
+  font-weight: $semiBold;
+  color: $text-Color;
+  line-height: 4.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@mixin button {
+  background: $primary-color;
+  color: $background-body;
+  font-weight: $extraBold;
+  border-radius: $border-radiusM;
+  padding: 0.875rem 1.5rem;
+  text-align: center;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  &:hover {
+    background: $secondary-color;
+    color: $text-Color;
+  }
+}

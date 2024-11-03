@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis portfolio</title>
+    <link rel="stylesheet" href="./scss/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+  </head>
+
+  <body>
+    <header>
+      <a href="./index.html">
+        <img
+          class="logo"
+          src="./images/logo.png"
+          alt="Golden logo with the letters A and D"
+        />
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about-me"> About</a></li>
+          <li><a href="#skills"> Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- <li><a href="#experience">Experience</a></li> -->
+          <li><a href="#contact-me">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Frontpage-->
+      <div class="wrapper">
+        <section id="landing-page">
+          <div class="overlay">
+            <h1 class="main-title">
+              Welcome <br />
+              <span class="portfolio-title">to my portfolio </span>
+            </h1>
+          </div>
+          <img
+            src="./images/resume-picture2.jpg"
+            alt="A resume picture of the author"
+            class="hero-image"
+          />
+
+          <a href="#about-me" class="find-out-more">FIND OUT MORE</a>
+        </section>
+      </div>
+      <section id="about-me">
+        <h2 class="section-title">
+          ABOUT ME<span class="second-color"> .</span>
+        </h2>
+        <h3 class="section-subtitle">Fullstack Developer</h3>
+        <p>
+          I'm Artemis Davakou a fullstack developer currently studying at Chas
+          Academy. I'm passionate about both software and web development and
+          always eager for opportunities that allow me to combine these skills.
+          I thrive in team enviroments and find it especially rewarding when we
+          tackle complex challenges together.
+        </p>
+        <br />
+        <a href="#contact-me" class="contact-me-button">GET IN TOUCH</a>
+      </section>
+
+      <section id="skills">
+        <div class="skill-wrapper">
+          <h2 class="section-title">
+            MY SKILLS<span class="second-color"> .</span>
+          </h2>
+          <div id="skills-container">
+            <section class="skills-category" id="backend-skills">
+              <h3 class="skills-title">BACKEND</h3>
+              <h4 class="skills-subtitle">Languages:</h4>
+              <ul class="skills-list">
+                <li>C</li>
+                <li>C#</li>
+                <li>Haskell</li>
+                <li>Java</li>
+                <li>MySQL</li>
+                <li>PHP</li>
+                <li>Shell Script</li>
+              </ul>
+              <h4 class="skills-subtitle">Frameworks:</h4>
+              <ul class="skills-list">
+                <li>Laravel</li>
+                <li>Spring Boot</li>
+                <li>Django</li>
+                <li>Node.js</li>
+              </ul>
+            </section>
+            <section class="skills-category" id="dev-tools">
+              <h3 class="skills-title">DEV TOOLS</h3>
+              <h4 class="skills-subtitle">Tools:</h4>
+              <ul class="skills-list">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Jira</li>
+                <li>Jenkins</li>
+                <li>Trello</li>
+                <li>Visual Studio Code</li>
+              </ul>
+            </section>
+
+            <section class="skills-category" id="frontend-skills">
+              <h3 class="skills-title">FRONTEND</h3>
+              <h4 class="skills-subtitle">Languages:</h4>
+              <ul class="skills-list">
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>Sass</li>
+                <li>JavaScript</li>
+                <li>Dart</li>
+              </ul>
+              <h4 class="skills-subtitle">Frameworks:</h4>
+              <ul class="skills-list">
+                <li>Angular</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+                <li>Vue.js</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2 class="section-title">
+          MY PROJECTS<span class="second-color"> .</span>
+        </h2>
+        <div id="projects-container">
+          <article class="project-category">
+            <div class="video-styling">
+              <h3 class="project-title">Memory Card</h3>
+              <video
+                loop
+                autoplay
+                muted
+                class="memory-card"
+                src="./images/memorycard-ezgif.com-crop-video.mp4"
+              ></video>
+            </div>
+            <div>
+              <ul class="skills-used-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <a
+                href="https://youtu.be/dQw4w9WgXcQ?si=SuGAlD4AL8z498in&t=35"
+                class="project-button"
+                rel="noreferrer noopener"
+                target="_blank"
+                >Read More</a
+              >
+            </div>
+          </article>
+          <article class="project-category">
+            <div class="video-styling">
+              <h3 class="project-title">Webpage in Progress</h3>
+              <img
+                src="./images/portfolio.png"
+                alt="Screenshot of the frontend web project"
+                id="portfolio-picture"
+              />
+            </div>
+            <div class="skills-used">
+              <ul class="skills-used-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Scss</li>
+              </ul>
+              <a href="https://github.com/ADchasacademy" class="project-button"
+                >Read More</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="wrapper">
+          <h2 class="section-title">
+            PRICING<span class="second-color"> .</span>
+          </h2>
+          <div class="table">
+            <table>
+              <tr>
+                <th>Features</th>
+                <th>Basic</th>
+                <th>Standard</th>
+                <th>Premium</th>
+              </tr>
+              <tr>
+                <td>Pages</td>
+                <td>Up to 5 Pages</td>
+                <td>Up to 10 Pages</td>
+                <td>Unlimited Pages</td>
+              </tr>
+              <tr>
+                <td>Responsive Design</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+              </tr>
+              <tr>
+                <td>Custom Design</td>
+                <td>❌</td>
+                <td>✔️</td>
+                <td>✔️</td>
+              </tr>
+              <tr>
+                <td>SEO Optimization</td>
+                <td>❌</td>
+                <td>Basic</td>
+                <td>Advanced</td>
+              </tr>
+              <tr>
+                <td>eCommerce Integration</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✔️</td>
+              </tr>
+              <tr>
+                <td>Support</td>
+                <td>Email</td>
+                <td>Email & Phone</td>
+                <td>24/7 Support</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>$500</td>
+                <td>$1,000</td>
+                <td>$2,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section id="contact-me">
+        <div id="form">
+          <h2 class="section-title">
+            GET IN TOUCH<span class="white"> .</span>
+          </h2>
+
+          <form action="/" method="post">
+            <div class="field-wrapper half-width">
+              <label for="first">
+                First Name<span class="required">*</span>
+              </label>
+              <input
+                id="first"
+                placeholder="first name"
+                type="text"
+                required
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="field-wrapper half-width">
+              <label for="last">
+                Last Name<span class="required">*</span>
+              </label>
+              <input
+                id="last"
+                placeholder="last name"
+                type="text"
+                required
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="field-wrapper">
+              <label for="email">
+                Email Address<span class="required">*</span>
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="email"
+                required
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="field-wrapper">
+              <label for="message">
+                Write a Message<span class="req">*</span>
+              </label>
+              <textarea id="message" placeholder="message"></textarea>
+            </div>
+
+            <button type="submit" class="contact-me-button">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <div id="contact-me-container">
+        <p id="horizontal-scrolling-text">
+          I code <span class="primary-color">/</span
+          ><span class="second-color">/</span> I create
+          <span class="primary-color">/</span
+          ><span class="second-color">/</span> I care
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
